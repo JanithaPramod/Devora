@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="apply.css">
     <link rel="stylesheet" href="scrollbar.css">
-    <link rel="shortcut icon" href="image/devora 2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="devora 2.png" type="x-icon">
 
 </head>
 
