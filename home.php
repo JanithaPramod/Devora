@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="scrollbar.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="image/devora 2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="devora 2.png" type="x-icon">
 
 </head>
 
@@ -27,7 +27,7 @@
             <!-- list item -->
             <div class="list">
                 <div class="item">
-                    <img src="image/well.jpg">
+                    <img src="well.jpg">
                     <div class="content">
                         <div class="author">WELCOME TO,</div>
                         <div class="topic">DEVORA (PVT) LTD.</div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/two.png">
+                    <img src="two.png">
                     <div class="content">
                         <div class="author">DEVORA</div>
                         <div class="title">GATHERING</div>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/three.png">
+                    <img src="three.png">
                     <div class="content">
                         <div class="author">DEVORA</div>
                         <div class="title">REQUIRENMENT</div>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/four.jpg">
+                    <img src="four.jpg">
                     <div class="content">
                         <div class="author">DEVORA</div>
                         <div class="title">FINAL PROJECT</div>
@@ -78,7 +78,7 @@
             <!-- list thumnail -->
             <div class="thumbnail">
                 <div class="item">
-                    <img src="image/well.jpg">
+                    <img src="well.jpg">
                     <div class="content">
                         <div class="title">
                             WELCOME
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/two.png">
+                    <img src="two.png">
                     <div class="content">
                         <div class="title">
                             GATHERING REQUIRENMENT
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/three.png">
+                    <img src="three.png">
                     <div class="content">
                         <div class="title">
                             REQUIRENMENT PROCESSING
@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/four.jpg">
+                    <img src="four.jpg">
                     <div class="content">
                         <div class="title">
                             FINAL PROJECT HANDOVER
@@ -138,7 +138,7 @@
 
             <div class="about-image">
 
-                <img src="image/home-about.jpeg" />
+                <img src="home-about.jpeg" />
 
             </div>
 
