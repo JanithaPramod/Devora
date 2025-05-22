@@ -7,7 +7,7 @@
     <title>Services</title>
 
     <link rel="stylesheet" href="Services.css" />
-    <link rel="shortcut icon" href="image/devora 2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="devora 2.png" type="x-icon">
     <link rel="stylesheet" href="scrollbar.css" />
 
 </head>
