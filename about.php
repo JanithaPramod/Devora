@@ -7,7 +7,7 @@
     <title>DEVORA | About</title>
 
     <link rel="stylesheet" href="about.css">
-    <link rel="shortcut icon" href="image/devora 2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="devora 2.png" type="x-icon">
     <link rel="stylesheet" href="scrollbar.css">
 
 </head>
@@ -24,7 +24,7 @@
 
         <div class="image">
 
-            <img src="image/about.jpg" />
+            <img src="about.jpg" />
 
         </div>
 
