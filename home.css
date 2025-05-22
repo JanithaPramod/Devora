@@ -1,0 +1,910 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+.home-body {
+
+    background-color: #1A1A1D;
+
+}
+
+.home-section {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.carousel {
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.carousel .list .item .author {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.carousel .list .item .title,
+.carousel .list .item .topic {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.carousel .list .item .topic {
+    color: #ff0030;
+}
+
+.carousel .list .item .img {
+
+    width: 400px;
+    height: 400px;
+    background-image: url("image/logo.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.carousel .list .item .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.carousel .list .item .buttons button {
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.carousel .list .item .buttons button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+/* thumbail */
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnail .item .content {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title {
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #a1a1a175;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.thumbnail .item .content .description {
+    font-weight: 300;
+}
+
+/* arrows */
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.arrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .img,
+.carousel .list .item:nth-child(1) .content .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.carousel .list .item:nth-child(1) .content .title {
+    animation-delay: 1.2s !important;
+}
+
+.carousel .list .item:nth-child(1) .content .topic {
+    animation-delay: 1.4s !important;
+}
+
+.carousel .list .item:nth-child(1) .content .des {
+    animation-delay: 1.6s !important;
+}
+
+.carousel .list .item:nth-child(1) .content .buttons {
+    animation-delay: 1.8s !important;
+}
+
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.carousel.prev .list .item img {
+    z-index: 100;
+}
+
+@keyframes showThumbnail {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.carousel.next .thumbnail {
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext {
+    from {
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time {
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #ff0030;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+    animation: runningTime 3s linear 1 forwards;
+}
+
+@keyframes runningTime {
+    from {
+        width: 100%
+    }
+
+    to {
+        width: 0
+    }
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+    pointer-events: none;
+}
+
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons {
+    animation: contentOut 1.5s linear 1 forwards !important;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.about {
+
+    padding: 20px;
+
+}
+
+.head-txt {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.head-txt h1 {
+
+    font-size: 50px;
+    font-family: "Oswald", serif;
+    color: white;
+    border-left: 10px solid #ff0030;
+    padding: 0 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+
+}
+
+.head-txt h1 span {
+
+    color: #ff0030;
+
+}
+
+.about-content {
+
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.about-image {
+
+    display: flex;
+    width: 600px;
+
+}
+
+.about-image img {
+
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ff0030;
+
+}
+
+.about-txt {
+
+    width: 1000px;
+    word-break: break-all;
+
+}
+
+
+
+.about-txt p {
+
+    font-family: "Roboto", serif;
+    font-size: 20px;
+    color: rgba(241, 239, 239, 0.692);
+    letter-spacing: 1px;
+
+}
+
+.about-txt p span {
+
+    font-size: 25px;
+    font-weight: bold;
+    color: #ff0030;
+
+}
+
+::selection {
+
+    background-color: #ff002f88;
+
+}
+
+.about-txt button {
+
+    margin-top: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.349);
+    border: 3px solid #ff0030;
+    border-radius: 5px;
+    color: #ff0030;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.6s ease;
+
+}
+
+.about-txt button:hover {
+
+    color: white;
+    box-shadow: 0 0 8px #ff0030;
+
+}
+
+.about-txt button span {
+
+    position: relative;
+    z-index: 50;
+
+}
+
+.about-txt button::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: #ff0030;
+    transition: all 0.6s ease;
+
+}
+
+.about-txt button:hover::before {
+
+    left: 0;
+
+}
+
+.services {
+
+    padding: 50px;
+    background-color: #101010;
+
+}
+
+.services-content {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 50px;
+
+}
+
+.card {
+
+    border: 3px solid #ff0030;
+    padding: 20px;
+    border-radius: 10px;
+    height: 250px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.6s ease;
+
+}
+
+.card i {
+
+    color: white;
+    font-size: 50px;
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.6s ease;
+
+}
+
+.card h2 {
+
+    font-size: 30px;
+    color: white;
+    font-family: "Geist Mono", serif;
+    transition: all 0.6s ease;
+
+}
+
+.card:hover {
+
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff0030;
+
+}
+
+.card:hover i {
+
+    border: 3px solid #ff0030;
+    color: #ff0030;
+
+}
+
+.all-services {
+
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.all-services button {
+
+    margin-top: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.349);
+    border: 3px solid #ff0030;
+    border-radius: 5px;
+    color: #ff0030;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.6s ease;
+
+}
+
+.all-services button:hover {
+
+    color: white;
+    box-shadow: 0 0 8px #ff0030;
+
+}
+
+.all-services button span {
+
+    position: relative;
+    z-index: 50;
+
+}
+
+.all-services button::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: #ff0030;
+    transition: all 0.6s ease;
+
+}
+
+.all-services button:hover::before {
+
+    left: 0;
+
+}
+
+.contact {
+
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+
+}
+
+.input_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.input-field {
+    width: 500px;
+    height: 55px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    padding-inline: 20px 50px;
+    border: 2px solid #ff0030;
+    border-radius: 30px;
+    outline: none;
+}
+
+.label {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: white;
+    transition: 0.2s;
+}
+
+.input-field:focus~.label,
+.input-field:valid~.label {
+    background-color: black;
+    color: #ffffff;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 14px;
+    border-radius: 30px;
+    padding: 0 10px;
+}
+
+.input_box i {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    font-size: 20px;
+    color: white;
+}
+
+.message {
+
+    width: 500px;
+    height: 250px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ff0030;
+    border-radius: 15px;
+    outline: none;
+    margin: 15px 0;
+    resize: none;
+
+}
+
+::placeholder {
+
+    color: white;
+
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-content {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+
+}
+
+.contact-img {
+
+    width: 500px;
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+.contact-img img {
+
+    width: 100%;
+
+}
+
+form button {
+
+    margin-top: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.349);
+    border: 3px solid #ff0030;
+    border-radius: 5px;
+    color: #ff0030;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.6s ease;
+
+}
+
+form button:hover {
+
+    color: white;
+    box-shadow: 0 0 8px #ff0030;
+
+}
+
+form button span {
+
+    position: relative;
+    z-index: 50;
+
+}
+
+form button::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: #ff0030;
+    transition: all 0.6s ease;
+
+}
+
+form button:hover::before {
+
+    left: 0;
+
+}
+
+@media(max-width:1024px){
+
+    .about-content{
+
+        flex-direction: column;
+        padding: 30px;
+
+    }
+
+    .about-image{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .about-image img{
+
+        width: 400px;
+
+    }
+
+    .about-txt{
+
+        padding: 30px;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .contact-img{
+
+        display: none;
+
+    }
+
+    form{
+
+        width: 100%;
+
+    }
+
+    .img{
+
+        display: none;
+
+    }
+
+    .card h2{
+
+        text-align: center;
+
+    }
+
+    .contact{
+
+        height: auto;
+
+    }
+
+}
+
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content {
+        padding-right: 0;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:500px){
+
+    .about-image img{
+
+        width: 300px;
+
+    }
+
+    .input-field{
+
+        width: 300px;
+
+    }
+
+    .message{
+
+        width: 300px;
+
+    }
+
+    .about-txt{
+
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .about{
+
+        padding: 20px 5px;
+
+    }
+
+    .about-txt p{
+
+        width: 100%;
+        font-size: 15px;
+
+    }
+
+}
