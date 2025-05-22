@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEVORA | Testimonials</title>
 
-    <link rel="shortcut icon" href="image/devora 2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="devora 2.png" type="x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="testimonials.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=crown" />
@@ -36,7 +36,7 @@
 
             <div class="card">
 
-                <img src="image/about.jpg" alt="">
+                <img src="about.jpg" alt="">
                 <h3>JANITHA PRAMOD</h3>
                 <h4>CO-FOUNDER</h4>
 
@@ -76,7 +76,7 @@
 
             <div class="card">
 
-                <img src="image/about.jpg" alt="">
+                <img src="about.jpg" alt="">
                 <h3>THASITH KALPANA</h3>
                 <h4>CO-FOUNDER</h4>
 
@@ -116,7 +116,7 @@
 
             <div class="card">
 
-                <img src="image/about.jpg" alt="">
+                <img src="about.jpg" alt="">
                 <h3>AYODYA PRABOD</h3>
                 <h4>CO-FOUNDER</h4>
 
